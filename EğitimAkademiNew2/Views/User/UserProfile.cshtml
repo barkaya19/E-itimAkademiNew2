@@ -1,0 +1,38 @@
+﻿@using EntityLayer.Concrete
+@model List<User>
+@{
+    ViewData["Title"] = "UserProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<br />
+<h1>Kullanıcı Profili</h1>
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Kullanıcı Adı</td>
+            <td>Kullanıcı Soyadı</td>
+            <td>Şifre</td>
+            <td>Alan</td>
+            <td>Okul</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+            <td>@item.UserName</td>
+            <td>@item.UserLastName</td>
+            <td>@item.Password</td>
+            <td>@item.Area</td>
+            <td>@item.Scholl</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<br />

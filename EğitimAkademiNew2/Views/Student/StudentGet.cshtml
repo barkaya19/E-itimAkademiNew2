@@ -1,0 +1,36 @@
+﻿@using EntityLayer.Concrete
+@model List<Student>
+@{
+    ViewData["Title"] = "StudentGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Öğrenci Adı</td>
+            <td>Öğrenci Soyadı</td>
+            <td>Yaşı</td>
+            <td>Alanı</td>
+            <td>Üniversite</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+           <td>@item.Name</td>
+           <td>@item.Surname</td>
+           <td>@item.Age</td>
+           <td>@item.Area</td>
+           <td>@item.Scholl</td>
+            <td><p>https://localhost:7285/Home/ChatDemo</p></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

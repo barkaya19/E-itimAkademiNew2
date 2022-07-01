@@ -1,0 +1,43 @@
+﻿@using EntityLayer.Concrete
+@model List<Lesson>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<br />
+<br />
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Ders</td>
+            <td>Öğretmen Adı</td>
+            <td>Ders Point</td>
+            <td>Ders Hakkında</td>
+            <td>Yorumlar</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+            <td>@item.LessonName</td>
+            <td>@item.TeacherName</td>
+            <td>@item.LessonPoint</td>
+            <td>@item.LessonAbout</td>
+            <td>@item.LessonComment</td>
+@*            <td><a class="btn btn-primary" href="@Url.Action("EditLesson", "User", new { id = item.LessonId })">Ekle</a></td>*@
+            </tr>
+        }
+    </tbody>
+</table>
+ <a href="/TotalLesson/YeniDers1/" class="btn btn-danger">Ders Ekle</a>
+<br />
+<br />
+<br />
+<br />
+

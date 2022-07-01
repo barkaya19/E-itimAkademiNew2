@@ -1,0 +1,22 @@
+﻿
+@model EntityLayer.Concrete.Lesson
+@{
+    ViewData["Title"] = "DersGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+    <b>Ders Adı</b>
+    @Html.TextBoxFor(x=>x.LessonName, new { @class = "form-control"})
+    <br />
+     <b>Öğretmen Adı</b>
+    @Html.TextBoxFor(x=>x.TeacherName, new { @class = "form-control"})
+    <br />
+    <button class="btn btn-info">Ekle</button>
+
+
